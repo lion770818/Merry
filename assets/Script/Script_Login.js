@@ -25,7 +25,7 @@ cc.Class({
     },
 
     onButtonClick: function() {
-        this.label_test.string = "測試點擊";
+        //this.label_test.string = "測試點擊";
         var account_str = this.editbox_Account.string;
         var password_str = this.editbox_Password.string;
         cc.log("玩家帳號 account_str=" + account_str );
@@ -54,6 +54,11 @@ cc.Class({
             var Message = json["Message"];
             cc.log("http post 回應 Code=" + Code );
             cc.log("http post 回應 Message=" + Message );
+            
+            // 轉場
+            // http://www.cocos.com/docs/creator/scripting/scene-managing.html
+            //cc.director.replaceScene( cc.TransitionPageTurn(1, new Scene_Lobby(), false) );
+            cc.director.loadScene("Scene_Lobby");
         };
     },
 
