@@ -30,8 +30,10 @@ cc.Class({
         var password_str = this.editbox_Password.string;
         cc.log("玩家帳號 account_str=" + account_str );
         cc.log("玩家密碼 account_str=" + password_str );
+        cc.director.loadScene("Scene_Lobby");
         
-        var url = "http://127.0.0.1:3000/MblieLogin";
+        
+        var url = "http://192.168.1.119:3000/MblieLogin";
         //var params = "Account=" + account_str + "&PassWord=" + password_str;
         var params = "Account=cat111&PassWord=1234&UID=65535";
         var xhr = cc.loader.getXMLHttpRequest();
