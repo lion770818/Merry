@@ -12,30 +12,18 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        button_back : cc.Button,
-        audio : cc.AudioClip,
+        button_exit : cc.Button,
     },
 
     // use this for initialization
     onLoad: function () {
-        cc.log("Scene_Lobby 載入");
-        this.current = cc.audioEngine.play(this.audio, true, 1);
-    },
-    
-    onDestroy: function () {
-        cc.log("#Scene_Lobby銷毀");
-        cc.audioEngine.stop(this.current);
-    },
 
-    onEixt: function () {
-        cc.log("Scene_Lobby 離開");
-        //cc.audioEngine.stop(this.current);
     },
     
     onButtonClick: function() {
-        cc.log("點到返回按鈕");
-        cc.audioEngine.stop(this.current);
-        cc.director.loadScene("Scene_Login");
+        cc.log("點到離開按鈕");
+        //cc.audioEngine.stop(this.current);
+        //cc.director.end();
     }
 
     // called every frame, uncomment this function to activate update callback

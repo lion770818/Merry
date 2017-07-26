@@ -16,23 +16,38 @@ cc.Class({
         button_test : cc.Button,
         
         editbox_Account : cc.EditBox,       // 帳號
-        editbox_Password : cc.EditBox       // 密碼
+        editbox_Password : cc.EditBox,       // 密碼
+        
+        audio : cc.AudioClip,
+
     },
 
     // use this for initialization
     onLoad: function () {
 
+        //this.audioSource.play();
+        this.current = cc.audioEngine.play(this.audio, false, 1);
     },
 
+    onDestroy: function () {
+        cc.log("#Scene_Login銷毀");
+        cc.audioEngine.stop(this.current);
+    },
+    
     onButtonClick: function() {
         //this.label_test.string = "測試點擊";
         var account_str = this.editbox_Account.string;
         var password_str = this.editbox_Password.string;
         cc.log("玩家帳號 account_str=" + account_str );
         cc.log("玩家密碼 account_str=" + password_str );
+        
+        // 暫停音樂
+        cc.audioEngine.stop(this.current);
+        
+        // 轉場
         cc.director.loadScene("Scene_Lobby");
         
-        
+        /*
         var url = "http://192.168.1.119:3000/MblieLogin";
         //var params = "Account=" + account_str + "&PassWord=" + password_str;
         var params = "Account=cat111&PassWord=1234&UID=65535";
@@ -62,6 +77,7 @@ cc.Class({
             //cc.director.replaceScene( cc.TransitionPageTurn(1, new Scene_Lobby(), false) );
             cc.director.loadScene("Scene_Lobby");
         };
+        */
     },
 
     // called every frame, uncomment this function to activate update callback
