@@ -12,15 +12,18 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        audioSource: {
-         type: cc.AudioSource,
-         default: null
-        },
+        button_Spin : cc.Button,
+        audio : cc.AudioClip,       // 點擊按鈕音效
     },
 
     // use this for initialization
     onLoad: function () {
-        this.audioSource.play();
+        
+    },
+    
+    onClickButton: function(){
+     cc.log("點到spin按鈕了");   
+     this.current = cc.audioEngine.play(this.audio, false, 1);
     },
 
     // called every frame, uncomment this function to activate update callback

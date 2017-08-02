@@ -699,7 +699,8 @@
     },
     "audio": {
       "__uuid__": "73d5a5cd-d138-4ec1-b7f7-f51cb700fa6a"
-    }
+    },
+    "ws": null
   },
   {
     "__type__": "cc.Button",
