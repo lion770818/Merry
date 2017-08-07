@@ -14,7 +14,7 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        label_test : cc.Label,
+        label_LoginStatue : cc.Label,
         button_test : cc.Button,
         
         editbox_Account : cc.EditBox,       // 帳號
@@ -27,6 +27,8 @@ cc.Class({
     //==================================================================================================================
     // 物件初始化    
     onLoad: function () {
+
+        cc.log("#onLoad 物件初始化");
 
         //this.audioSource.play();
         this.current = cc.audioEngine.play(this.audio, false, 1);
@@ -111,11 +113,14 @@ cc.Class({
     // 網路初始化
     Net_Init : function(){
         
-        var SavePlayerInfo = this.SavePlayerInfo;
+        // 拷貝一份 給裡面的callbackfunc使用
+        var SavePlayerInfo      = this.SavePlayerInfo;
+        var label_LoginStatue   = this.label_LoginStatue;
         
         console.log("###測試 WebSocket 開始...");
         //var ws = new WebSocket("ws://localhost:1234/socket");
         this.ws = new WebSocket( "ws://192.168.1.119:1234/Login");
+        var ws = this.ws;
         console.log("###測試 WebSocket 開始...222");
         this.ws.onopen = function (event) {
              console.log("cocos Send Text WS was opened.");
@@ -133,8 +138,10 @@ cc.Class({
             
             if( Code == 0 )
             {
-                cc.log("#要轉場到Scene_Lobby了");
-
+                var MessageStr = "#要轉場到Scene_Lobby了";
+                cc.log(MessageStr);
+                label_LoginStatue.string = MessageStr;
+                
                 cc.log("儲存玩家資訊到localStorage");
                 var Data        = json["Data"];
                 var Game_Money  = json["Game_Money"];
@@ -146,6 +153,8 @@ cc.Class({
                 cc.log('#UID =' + UID );
                 SavePlayerInfo(Data,Game_Money,UID);
                 
+                cc.log('#關閉websocket...' );
+                ws.close();
                 
                 // 轉場
                 // http://www.cocos.com/docs/creator/scripting/scene-managing.html
@@ -154,14 +163,16 @@ cc.Class({
             }
             else
             {
-                cc.log("登入失敗 Code=" + Code + " Message = " + Message );
+                var MessageStr = "登入失敗 Code=" + Code + " Message = " + Message;
+                cc.log(MessageStr);
+                label_LoginStatue.string = MessageStr;
             }
          };
         this.ws.onerror = function (event) {
              console.log("Send Text fired an error");
          };
         this.ws.onclose = function (event) {
-             console.log("WebSocket instance closed.");
+             console.log("#GameServer斷線 WebSocket instance closed.");
          };
     },
     
@@ -185,7 +196,7 @@ cc.Class({
     //==================================================================================================================
     // 登入按鈕按下
     onButtonClick: function() {
-        //this.label_test.string = "測試點擊";
+        
         var account_str = this.editbox_Account.string;
         var password_str = this.editbox_Password.string;
         cc.log("玩家帳號 account_str=" + account_str );

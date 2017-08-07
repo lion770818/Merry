@@ -33,6 +33,9 @@ cc.Class({
         
         this.Label_MachineNum.string = this.MachineNum;
         this.Label_PlayerMoney.string = this.Money;
+        
+        var label = this.getComponent(cc.Label);
+        cc.log('####### label = ' + label );
     },
 
     //==================================================================================================================
