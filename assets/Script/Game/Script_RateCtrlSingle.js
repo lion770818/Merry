@@ -23,6 +23,12 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.RateValue = 0;
+        
+        var label = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
+        label.string = "22222";
+        
+        var Script_RateCtrlSingle = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0").getComponent("Script_RateCtrlSingle");
+        cc.log("Script_RateCtrlSingle=" + Script_RateCtrlSingle );
     },
 
     onButtonClick: function(){
