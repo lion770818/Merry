@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Button_RateCtrl",
+    "_name": "Button_RateCtrl_0",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -42,8 +42,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 153,
+      "b": 18,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -141,10 +141,12 @@
     "Label_RateValue": {
       "__id__": 6
     },
-    "RateValue": 0,
+    "RateValue": -4.524158825347513e-15,
     "audio": {
       "__uuid__": "2e89aa86-8f23-498c-85ad-0f1996718f99"
-    }
+    },
+    "BetKind": [],
+    "BetKindStr": ""
   },
   {
     "__type__": "cc.Button",
@@ -354,7 +356,9 @@
     "RateValue": 0,
     "audio": {
       "__uuid__": "2e89aa86-8f23-498c-85ad-0f1996718f99"
-    }
+    },
+    "BetKind": [],
+    "BetKindStr": ""
   },
   {
     "__type__": "cc.PrefabInfo",

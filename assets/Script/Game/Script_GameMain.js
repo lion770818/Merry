@@ -46,9 +46,9 @@ cc.Class({
         var ls          = cc.sys.localStorage;
         
         cc.log("#11111");
-        this.PlayerInfo = ls.getItem(DEF_LS_KeyName.DEF_LS_PLAYER );
-        this.Money      = ls.getItem(DEF_LS_KeyName.DEF_LS_PLAYER_MONEY );
-        this.MachineNum      = ls.getItem(DEF_LS_KeyName.DEF_LS_MACHINE_NUM );
+        this.PlayerInfo     = ls.getItem(DEF_LS_KeyName.DEF_LS_PLAYER );
+        this.Money          = ls.getItem(DEF_LS_KeyName.DEF_LS_PLAYER_MONEY );
+        this.MachineNum     = ls.getItem(DEF_LS_KeyName.DEF_LS_MACHINE_NUM );
         
         cc.log("玩家資訊 PlayerInfo=" + this.PlayerInfo );
         cc.log("玩家金錢 Money=" + this.Money );

@@ -1,4 +1,6 @@
 
+var DEF_LS_KeyName = require('../Common/DEF_LocalStorageKeyName');
+
 var x = new Array();
 var y = new Array();
 var RateTalbe = new Array();
@@ -74,15 +76,63 @@ cc.Class({
     // 點到spin按鈕
     onClickButton: function(){
         cc.log("點到spin按鈕了");   
+        
+        
         this.current = cc.audioEngine.play(this.audio, false, 1);
-     
-        if (this.ws.readyState === WebSocket.OPEN) {
-            var Spinstr = '{"Account":"cat111","Password":"1234","BetKind":[0,1,2,3,4,5,1,1,1]}';
-            console.log("Spinstr=" + Spinstr );
-            this.ws.send(Spinstr);
+        var CheckPlayBetRet = this.CheckPlayBet();
+        
+        /*
+        var Button_RateCtrl_0 = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0");
+        var Script_RateCtrlSingle = Button_RateCtrl_0.getChildByName("Script_RateCtrlSingle");
+        cc.log("=====Button_RateCtrl_0=" + Button_RateCtrl_0 );
+        cc.log("=====Script_RateCtrlSingle=" + Script_RateCtrlSingle );
+        cc.log("===== RateValue=" + Script_RateCtrlSingle.RateValue );
+        cc.log("===== BetKindStr=" + Script_RateCtrlSingle.BetKindStr );
+        */
+        var Script_RateCtrlSingle = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0").getComponent("Script_RateCtrlSingle");
+        cc.log("=====Script_RateCtrlSingle=" + Script_RateCtrlSingle );
+        cc.log("=====Script_RateCtrlSingle.RateValue=" + Script_RateCtrlSingle.RateValue );
+         
+        var ls = cc.sys.localStorage;
+        
+        
+        var BetKindStr      = ls.getItem(DEF_LS_KeyName.DEF_LS_BET_KIND_STR );
+        var account_str     = ls.getItem(DEF_LS_KeyName.DEF_LS_ACCOUNT );
+        var password_str    = ls.getItem(DEF_LS_KeyName.DEF_LS_PASSWORD );
+        cc.log("#BetKindStr=" + BetKindStr );
+        
+        var BetKindTmp = BetKindStr.split(',');
+        cc.log("#BetKindTmp=" + BetKindTmp );
+        cc.log("#BetKindTmp length =" + BetKindTmp.length );
+        var BetKind = Array();
+        for( var i = 0; i < BetKindTmp.length; i++  )
+        {
+            BetKind[i] = parseInt(BetKindTmp[i]);
         }
-        else {
-            console.log("cocos WebSocket instance wasn't ready... readyState=" + this.ws.readyState  );
+        //
+        
+        // 檢查押注
+        if( CheckPlayBetRet === true )
+        {
+            // 檢查是否有連線
+            if (this.ws.readyState === WebSocket.OPEN ) {
+                
+                // 組合傳送出去的參數
+                var obj = {
+                    Account : account_str,
+                    PassWord : password_str,
+                    BetKind : BetKind
+                };
+                var params = JSON.stringify(obj);
+                console.log("params=" + params );
+                
+                //var Spinstr = '{"Account":"cat111","Password":"1234","BetKind":[0,1,2,3,4,5,1,1,1]}';
+                //console.log("Spinstr=" + Spinstr );
+                this.ws.send(params);
+            }
+            else {
+                console.log("cocos WebSocket instance wasn't ready... readyState=" + this.ws.readyState  );
+            }
         }
     },
 
@@ -168,7 +218,21 @@ cc.Class({
     //==================================================================================================================
     // 檢查玩家的押注是否大於金額
     CheckPlayBet : function(){
-        var Label_PlayerBetMoney = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
+        var Label_PlayerBetMoney    = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
+        var Label_PlayerMoney       = cc.find("Canvas/Label_PlayerMoney").getComponent(cc.Label);
+        cc.log("目前押注金額=" + Label_PlayerBetMoney.string );
+        cc.log("目前玩家金額=" + Label_PlayerMoney.string );
+        
+        var PlayerBetMoney = parseInt(Label_PlayerBetMoney.string);
+        var PlayerMoney = parseInt(Label_PlayerMoney.string);
+        
+        if( PlayerMoney >= PlayerBetMoney )
+            return true;
+        else
+        {
+            cc.log("#warning 玩家餘額不足... PlayerMoney=" + PlayerMoney + " PlayerBetMoney=" + PlayerBetMoney);
+            return false;
+        }
     },
     
     // 開始轉動
@@ -222,19 +286,23 @@ cc.Class({
                 var MessageStr = "#收到Spin的回應";
                 cc.log(MessageStr);
 
-                var Data        = json["Data"];
+                var Data = json["Data"];
                 cc.log('#Data 111111 =' + Data );
                 
                 var Playerinfojson = JSON.parse(Data)
                 var UID  = Playerinfojson["UID"];
                 var Game_Money = Playerinfojson["Game_Money"];
                 var data_Win_Money  = Playerinfojson["Win_Money"];
+                SpinResult  = Playerinfojson["SpinResult"];
                 cc.log('#UID =' + UID );
                 cc.log('#Game_Money =' + Game_Money );
                 cc.log('#Win_Money =' + data_Win_Money );
                 
                 PlayerMoney.string = Game_Money;
                 Win_Money.string  = data_Win_Money;
+                
+                LightFrame.x = x[SpinResult];
+                LightFrame.y = y[SpinResult];
                 //cc.log('#關閉websocket...' );
                 //ws.close();
             }

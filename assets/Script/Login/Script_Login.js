@@ -98,12 +98,20 @@ cc.Class({
     
     //==================================================================================================================
     // 儲存玩家資訊
-    SavePlayerInfo : function( PlayerInfo, Money, UID ){
+    SavePlayerInfo : function( account_str, password_str, PlayerInfo, Money, UID ){
+        
+        cc.log("###儲存玩家資訊" );
+        
         cc.log("玩家資訊 PlayerInfo=" + PlayerInfo );
         cc.log("玩家金錢 Money=" + Money );
         cc.log("暫時替代的機台編號 UID=" + UID );
+        cc.log("玩家帳號 account_str=" + account_str );
+        cc.log("玩家密碼 password_str=" + password_str );
         
         var ls = cc.sys.localStorage;
+        ls.setItem(DEF_LS_KeyName.DEF_LS_ACCOUNT, account_str );
+        ls.setItem(DEF_LS_KeyName.DEF_LS_PASSWORD, password_str );
+        
         ls.setItem(DEF_LS_KeyName.DEF_LS_PLAYER, PlayerInfo );
         ls.setItem(DEF_LS_KeyName.DEF_LS_PLAYER_MONEY, Money );
         ls.setItem(DEF_LS_KeyName.DEF_LS_MACHINE_NUM, UID );
@@ -113,11 +121,13 @@ cc.Class({
     // 網路初始化
     Net_Init : function(){
         
+        console.log("### Net_Init WebSocket 開始...");
+        
         // 拷貝一份 給裡面的callbackfunc使用
         var SavePlayerInfo      = this.SavePlayerInfo;
         var label_LoginStatue   = this.label_LoginStatue;
         
-        console.log("###測試 WebSocket 開始...");
+        
         //var ws = new WebSocket("ws://localhost:1234/socket");
         this.ws = new WebSocket( "ws://192.168.1.119:1234/Login");
         var ws = this.ws;
@@ -148,10 +158,15 @@ cc.Class({
                 
                 var Playerinfojson = JSON.parse(Data)
                 var UID  = Playerinfojson["UID"];
+                var account_str  = Playerinfojson["Account"];
+                var password_str  = Playerinfojson["Password"];
                 cc.log('#Data =' + Data );
                 cc.log('#Game_Money =' + Game_Money );
                 cc.log('#UID =' + UID );
-                SavePlayerInfo(Data,Game_Money,UID);
+                
+                cc.log('#account_str =' + account_str );
+                cc.log('#password_str =' + password_str );
+                SavePlayerInfo( account_str, password_str, Data, Game_Money, UID );
                 
                 cc.log('#關閉websocket...' );
                 ws.close();
@@ -197,10 +212,10 @@ cc.Class({
     // 登入按鈕按下
     onButtonClick: function() {
         
-        var account_str = this.editbox_Account.string;
-        var password_str = this.editbox_Password.string;
-        cc.log("玩家帳號 account_str=" + account_str );
-        cc.log("玩家密碼 account_str=" + password_str );
+        this.account_str = this.editbox_Account.string;
+        this.password_str = this.editbox_Password.string;
+        cc.log("玩家帳號 account_str=" + this.account_str );
+        cc.log("玩家密碼 account_str=" + this.password_str );
         
         // 暫停音樂
         cc.audioEngine.stop(this.current);
@@ -214,8 +229,8 @@ cc.Class({
         //params = params.replace("{2}", 65535);
         
         var obj = {
-            Account : account_str,
-            PassWord : password_str,
+            Account : this.account_str,
+            PassWord : this.password_str,
             UID : 65535
         };
         var params = JSON.stringify(obj);

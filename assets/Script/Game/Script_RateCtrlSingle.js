@@ -1,4 +1,6 @@
-//var RateValue = 0;
+var DEF_LS_KeyName = require('../Common/DEF_LocalStorageKeyName');
+
+var BET_CELL = 10;
 
 cc.Class({
     extends: cc.Component,
@@ -18,6 +20,8 @@ cc.Class({
         Label_RateValue : cc.Label,
         RateValue : 0,
         audio           : cc.AudioClip,       // 點擊按鈕音效
+        BetKind : Array(),
+        BetKindStr : "",
     },
 
     // use this for initialization
@@ -34,7 +38,7 @@ cc.Class({
 
     onButtonClick: function(){
         cc.log("#onButtonClick 開始" );
-        this.RateValue += 10;
+        this.RateValue += BET_CELL;
         cc.log("RateValue=" + this.RateValue );
         
         // 改變倍率文字
@@ -46,6 +50,7 @@ cc.Class({
         var Button_RateCtrl_0 = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0");
         cc.log("=====Button_RateCtrl_0=" + Button_RateCtrl_0 );
         
+        // 依序累加 算出總押注 
         var TotalRateValue = 0; 
         for( var i = 0; i< 9; i++)
         {
@@ -55,9 +60,18 @@ cc.Class({
             cc.log("=====Label_RateValue=" + Label_RateValue );
             cc.log("=====Label_RateValue.string=" + Label_RateValue.string );
             
-            TotalRateValue += parseInt(Label_RateValue.string);
+            
+            var RateValue = parseInt(Label_RateValue.string);
+            this.BetKind[i] = RateValue/BET_CELL;    // 押注表 只記錄壓幾下, 真正金額Server 會去計算
+            TotalRateValue += RateValue;             // 總押注
             cc.log("=====TotalRateValue=" + TotalRateValue );
         }
+        
+        this.BetKindStr = this.BetKind.toString();
+        cc.log("===== BetKind=" + this.BetKindStr );
+        
+        var ls = cc.sys.localStorage;
+        ls.setItem(DEF_LS_KeyName.DEF_LS_BET_KIND_STR, this.BetKindStr );
         
         var label = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
         label.string = TotalRateValue.toString();
