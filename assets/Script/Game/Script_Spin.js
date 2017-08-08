@@ -1,3 +1,30 @@
+
+var x = new Array();
+var y = new Array();
+var RateTalbe = new Array();
+
+
+    // 中獎框位置
+    var Rolling_PosNow;
+    var Rolling_Start;
+    var Rolling_Result;
+    var Rolling_Result_StopFrom;
+
+    var Rolling_Delay;            // 目前轉動延遲累計
+    var Rolling_Round;          // 轉了幾圈
+    var Rolling_Count;          // 停止計數
+    var Rolling_Speed;            // 目前轉動速度
+    var Rolling_Status;         // 轉動狀態值，用於轉動中的步驟控制
+    var Rolling_Time_Total;	// 累積等待Server時間
+    var SpinResult  = 0;    // 中獎框位置
+    
+    var ROLLGIN_GAME_STATUS_IDLE = 0;
+    var ROLLGIN_GAME_STATUS_PLAYING = 1;
+    var ROLLGIN_GAME_STATUS_ROLLING = 2;
+    var ROLLGIN_GAME_STATUS_STOP = 3;
+    var ROLLGIN_GAME_STATUS_QUIT = 4;
+    
+    var LightFrame; // 中獎框的物件
 cc.Class({
     extends: cc.Component,
 
@@ -22,6 +49,10 @@ cc.Class({
         
         Win_Money : cc.Label,
         Sprite_Button_Light : cc.Sprite,
+        
+        
+        MX : 0,     // 轉盤的中心點
+        MY : 0,     // 轉盤的中心點
     },
 
     // use this for initialization
@@ -34,8 +65,13 @@ cc.Class({
         
         // websocket連線
         this.Net_Init();
+        
+        // 設定轉動資訊
+        this.RollInit();
     },
     
+    //==================================================================================================================
+    // 點到spin按鈕
     onClickButton: function(){
         cc.log("點到spin按鈕了");   
         this.current = cc.audioEngine.play(this.audio, false, 1);
@@ -50,6 +86,112 @@ cc.Class({
         }
     },
 
+    SetMovePosInfo : function(){
+        var xGAdj = 1;
+        var yGAdj = 1;
+        
+        // 左下角位子
+        var MAP_X = this.MX - (265 * xGAdj);
+        var MAP_Y = this.MY - (150 * yGAdj);
+        
+        //var MAP_W = 114 * xGAdj, MAP_H = 100 * yGAdj;
+        var MAP_W = 88 * xGAdj, MAP_H = 74 * yGAdj;
+        
+        cc.log('####### MX = ' + this.MX );
+        cc.log('####### MY = ' + this.MY );
+        cc.log('####### MAP_X = ' + MAP_X );
+        cc.log('####### MAP_Y = ' + MAP_Y );
+        
+        //var x = new Array();
+        //var y = new Array();
+        
+        // 上排
+        x[0] = MAP_X + 0 * MAP_W; y[0] = MAP_Y + 6 * MAP_H;
+        x[1] = MAP_X + 1 * MAP_W; y[1] = MAP_Y + 6 * MAP_H;
+        x[2] = MAP_X + 2 * MAP_W; y[2] = MAP_Y + 6 * MAP_H;
+        x[3] = MAP_X + 3 * MAP_W; y[3] = MAP_Y + 6 * MAP_H;
+        x[4] = MAP_X + 4 * MAP_W; y[4] = MAP_Y + 6 * MAP_H;
+        x[5] = MAP_X + 5 * MAP_W; y[5] = MAP_Y + 6 * MAP_H;
+        x[6] = MAP_X + 6 * MAP_W; y[6] = MAP_Y + 6 * MAP_H;
+        
+        
+        // 右排
+        x[7]  = MAP_X + 6 * MAP_W; y[7]  = MAP_Y + 5 * MAP_H;
+        x[8]  = MAP_X + 6 * MAP_W; y[8]  = MAP_Y + 4 * MAP_H;
+        x[9]  = MAP_X + 6 * MAP_W; y[9]  = MAP_Y + 3 * MAP_H;
+        x[10] = MAP_X + 6 * MAP_W; y[10] = MAP_Y + 2 * MAP_H;
+        x[11] = MAP_X + 6 * MAP_W; y[11] = MAP_Y + 1 * MAP_H;
+
+        // 下排
+        x[12] = MAP_X + 6 * MAP_W; y[12] = MAP_Y + 0 * MAP_H;
+        x[13] = MAP_X + 5 * MAP_W; y[13] = MAP_Y + 0 * MAP_H;
+        x[14] = MAP_X + 4 * MAP_W; y[14] = MAP_Y + 0 * MAP_H;
+        x[15] = MAP_X + 3 * MAP_W; y[15] = MAP_Y + 0 * MAP_H;
+        x[16] = MAP_X + 2 * MAP_W; y[16] = MAP_Y + 0 * MAP_H;
+        x[17] = MAP_X + 1 * MAP_W; y[17] = MAP_Y + 0 * MAP_H;
+        x[18] = MAP_X + 0 * MAP_W; y[18] = MAP_Y + 0 * MAP_H;
+
+        // 左排
+        x[19] = MAP_X + 0 * MAP_W; y[19] = MAP_Y + 1 * MAP_H;
+        x[20] = MAP_X + 0 * MAP_W; y[20] = MAP_Y + 2 * MAP_H;
+        x[21] = MAP_X + 0 * MAP_W; y[21] = MAP_Y + 3 * MAP_H;
+        x[22] = MAP_X + 0 * MAP_W; y[22] = MAP_Y + 4 * MAP_H;
+        x[23] = MAP_X + 0 * MAP_W; y[23] = MAP_Y + 5 * MAP_H;
+        
+        //SpinResult = 23;
+        //var LightFrame = cc.find("Canvas/Sprite_Button_Light");
+        //LightFrame.x = x[SpinResult];
+        //LightFrame.y = y[SpinResult];
+        
+        //cc.log('####### LightFrame.x = ' + LightFrame.x );
+        //cc.log('####### LightFrame.y = ' + LightFrame.y );
+        
+        var FadeTo1 = cc.FadeTo.create(1, 150 );
+		var FadeTo2 = cc.FadeTo.create(1, 255 );
+		var sequence = cc.sequence( FadeTo1, FadeTo2 );
+        var repeatforever = cc.repeatForever(sequence);
+	    LightFrame.runAction(repeatforever);
+	    
+        
+        RateTalbe[0] = 5;       // 蘋果
+        RateTalbe[1] = 20;      // 西瓜
+        RateTalbe[2] = 30;      // 星星
+        RateTalbe[3] = 40;      // 七
+        RateTalbe[4] = 100;     // BAR
+        RateTalbe[5] = 20;      // 鈴鐺
+        RateTalbe[6] = 15;      // 藍色水果
+        RateTalbe[7] = 10;      // 橘子
+        RateTalbe[8] = 2;       // 櫻桃
+        cc.log("#SetMovePosInfo");  
+    },
+    
+    //==================================================================================================================
+    // 檢查玩家的押注是否大於金額
+    CheckPlayBet : function(){
+        var Label_PlayerBetMoney = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
+    },
+    
+    // 開始轉動
+    StartRolling : function(){
+        RollingGame_Status = enum_ROLLING_STATUS.ROLLGIN_GAME_STATUS_ROLLING;
+        Rolling_Time_Total = 0;
+        Rolling_Delay = 0;
+        Rolling_Count = 0;
+        Rolling_Round = 0;          // 已轉圈數
+        Rolling_Speed = 1;
+        Rolling_Status = 0;			// 起動
+    },
+    
+    //==================================================================================================================
+    // 設定轉動資訊
+    RollInit : function(){
+        
+        // 取得中獎框的物件
+        LightFrame = cc.find("Canvas/Sprite_Button_Light");
+        
+        // 設定中獎框的移動軌跡
+        this.SetMovePosInfo();
+    },
     //==================================================================================================================
     // 網路初始化
     Net_Init : function(){

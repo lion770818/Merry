@@ -24,11 +24,12 @@ cc.Class({
     onLoad: function () {
         this.RateValue = 0;
         
-        var label = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
-        label.string = "22222";
+        //var label = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
+        //label.string = "22222";
         
-        var Script_RateCtrlSingle = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0").getComponent("Script_RateCtrlSingle");
-        cc.log("Script_RateCtrlSingle=" + Script_RateCtrlSingle );
+        //var Script_RateCtrlSingle = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0").getComponent("Script_RateCtrlSingle");
+        //cc.log("=====Script_RateCtrlSingle=" + Script_RateCtrlSingle );
+        //cc.log("=====Script_RateCtrlSingle.RateValue=" + Script_RateCtrlSingle.RateValue );
     },
 
     onButtonClick: function(){
@@ -42,20 +43,24 @@ cc.Class({
         // 點擊按鈕音效
         this.current = cc.audioEngine.play(this.audio, false, 1);
         // ===================== 測試抓節點資料 fail ==========================
-        //Button_RateCtrl.Text = "11";
-        //this.Button_RateCtrl.getChildByName("Label").getComponent(cc.Label).string=123;
-        var node = this.node;
-        node.x = 100;
-        node.y = 400;
+        var Button_RateCtrl_0 = cc.find("Canvas/Layout_RateCtrl/Button_RateCtrl_0");
+        cc.log("=====Button_RateCtrl_0=" + Button_RateCtrl_0 );
         
-        cc.log("this.name=" + this.name );
+        var TotalRateValue = 0; 
+        for( var i = 0; i< 9; i++)
+        {
+            var path = "Canvas/Layout_RateCtrl/" + "Button_RateCtrl_" + i;
+            cc.log("=====path=" + path );
+            var Label_RateValue = cc.find(path).getChildByName("Label").getComponent(cc.Label);
+            cc.log("=====Label_RateValue=" + Label_RateValue );
+            cc.log("=====Label_RateValue.string=" + Label_RateValue.string );
+            
+            TotalRateValue += parseInt(Label_RateValue.string);
+            cc.log("=====TotalRateValue=" + TotalRateValue );
+        }
         
-        var label = this.getComponent(cc.Label);
-        cc.log("label=" + label );
-        var text = this.name + ' started';
-
-        // Change the text in Label Component
-        //label.string = text;
+        var label = cc.find("Canvas/Label_PlayerBetMoney").getComponent(cc.Label);
+        label.string = TotalRateValue.toString();
         // ===================== 測試抓節點資料 fail ==========================
         
         cc.log("#onButtonClick 結束" );
