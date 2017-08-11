@@ -1,3 +1,4 @@
+var LoadGame = false;
 cc.Class({
     extends: cc.Component,
 
@@ -59,8 +60,12 @@ cc.Class({
        
        cc.log("點到scrollView callback3 detail = " + scrollview );
        
-       cc.log("#要轉場到 Scene_Game 了");
-       cc.director.loadScene("Scene_Game");
+       if(LoadGame === false )
+       {
+            LoadGame = true;
+            cc.log("#要轉場到 Scene_Game 了");
+            cc.director.loadScene("Scene_Game");
+       }
     },
     
     // called every frame, uncomment this function to activate update callback

@@ -129,7 +129,9 @@ cc.Class({
         
         
         //var ws = new WebSocket("ws://localhost:1234/socket");
-        this.ws = new WebSocket( "ws://192.168.1.119:1234/Login");
+        //this.ws = new WebSocket( "ws://192.168.1.119:1234/Login");  // 內部
+        this.ws = new WebSocket( "ws://52.196.121.132:1234/Login");  // 外部
+        
         var ws = this.ws;
         console.log("###測試 WebSocket 開始...222");
         this.ws.onopen = function (event) {

@@ -196,12 +196,14 @@ cc.Class({
         //cc.log('####### LightFrame.x = ' + LightFrame.x );
         //cc.log('####### LightFrame.y = ' + LightFrame.y );
         
+        /*
+        // 瀏覽器不能跑 在研究
         var FadeTo1 = cc.FadeTo.create(1, 150 );
 		var FadeTo2 = cc.FadeTo.create(1, 255 );
 		var sequence = cc.sequence( FadeTo1, FadeTo2 );
         var repeatforever = cc.repeatForever(sequence);
 	    LightFrame.runAction(repeatforever);
-	    
+	    */
         
         RateTalbe[0] = 5;       // 蘋果
         RateTalbe[1] = 20;      // 西瓜
@@ -262,7 +264,9 @@ cc.Class({
         
         console.log("###測試 WebSocket 開始...");
         //var ws = new WebSocket("ws://localhost:1234/socket");
-        this.ws = new WebSocket( "ws://192.168.1.119:1234/SpinStart");
+        this.ws = new WebSocket( "ws://192.168.1.119:1234/SpinStart");    // 內部
+        //this.ws = new WebSocket( "ws://52.196.121.132:1234/SpinStart");      // 外部
+        
         var ws = this.ws;
         var PlayerMoney = this.PlayerMoney;
         var Win_Money = this.Win_Money;
