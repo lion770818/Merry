@@ -1,12 +1,14 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.3.1",
   "uuid": "c9fde15a-b7e6-4c43-af06-e63314cdcf42",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "IPD_MainMenu": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "2662056b-b0bd-4912-8e28-34dde467c721",
       "rawTextureUuid": "c9fde15a-b7e6-4c43-af06-e63314cdcf42",
       "trimType": "auto",

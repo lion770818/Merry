@@ -1,12 +1,14 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.3.1",
   "uuid": "b7f5415d-768d-4770-9bc4-e76eca300aea",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "MM_EF_Bet_Light": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "10d05904-1df4-4ed0-8bad-4d9b6e7d265d",
       "rawTextureUuid": "b7f5415d-768d-4770-9bc4-e76eca300aea",
       "trimType": "auto",

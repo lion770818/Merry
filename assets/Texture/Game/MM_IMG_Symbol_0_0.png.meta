@@ -1,12 +1,14 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.3.1",
   "uuid": "a9e51482-da03-4843-a298-705c9b5715c5",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "MM_IMG_Symbol_0_0": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "3ace64e2-a2c7-42f2-a0c2-eeac4e8530b3",
       "rawTextureUuid": "a9e51482-da03-4843-a298-705c9b5715c5",
       "trimType": "auto",

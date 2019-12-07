@@ -1,12 +1,14 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.3.1",
   "uuid": "0e436387-a61a-4cff-a943-e6c85be50c1a",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "COM_IMG_Girl_1": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c95a9771-f705-457b-a7ff-c4e060e70f6b",
       "rawTextureUuid": "0e436387-a61a-4cff-a943-e6c85be50c1a",
       "trimType": "auto",

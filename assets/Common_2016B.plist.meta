@@ -9,7 +9,7 @@
   "type": "Texture Packer",
   "subMetas": {
     "0.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "1e55209e-14ba-4806-8442-0077b007d9cb",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -31,7 +31,7 @@
       "subMetas": {}
     },
     "1.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "79cc8bcf-6d99-45bc-ba2c-634305175e6e",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -53,7 +53,7 @@
       "subMetas": {}
     },
     "2.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "42ad6dfd-231d-46fe-a8d5-92c10f1cb3e4",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -75,7 +75,7 @@
       "subMetas": {}
     },
     "3.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "515c9be5-fc30-4f78-b0a4-13849f9c6a77",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -97,7 +97,7 @@
       "subMetas": {}
     },
     "4.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "6d3e267a-c396-4596-95b8-3435578bcffd",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -119,7 +119,7 @@
       "subMetas": {}
     },
     "5.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "f72f9a40-e436-4aec-af8b-629cac165802",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -141,7 +141,7 @@
       "subMetas": {}
     },
     "6.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "5ea5ae05-4ffe-4925-a6c3-4db25e6f3d8e",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -163,7 +163,7 @@
       "subMetas": {}
     },
     "7.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "a2aeccc9-9836-46be-9d92-3afe30416976",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -185,7 +185,7 @@
       "subMetas": {}
     },
     "8.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "62844925-4871-4206-85db-35aa512399f4",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -207,7 +207,7 @@
       "subMetas": {}
     },
     "9.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "b24ee10b-addd-4537-bf3b-54cbc0387f54",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -229,7 +229,7 @@
       "subMetas": {}
     },
     "MiniGame_Ticket.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "35819ee0-d63a-4474-be7b-3f6055ad19f1",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -251,7 +251,7 @@
       "subMetas": {}
     },
     "MsgBackground.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "f8c17076-448e-48b3-b025-0f02c1be77bc",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -273,7 +273,7 @@
       "subMetas": {}
     },
     "MsgBackground_2.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "2ee082c2-8e44-467d-a246-930b1ae6595c",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -295,7 +295,7 @@
       "subMetas": {}
     },
     "MsgBackground_3.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c67838b6-4daf-47e4-b179-3fda57a7b279",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -317,7 +317,7 @@
       "subMetas": {}
     },
     "UI_Reward_PlaneBlack.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "4895d1c5-9565-48c4-9bd1-1efd3770648a",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -339,7 +339,7 @@
       "subMetas": {}
     },
     "UI_Reward_PlaneDown.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "fdb39f96-a814-467c-bc4a-183c1ece08ae",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -361,7 +361,7 @@
       "subMetas": {}
     },
     "UI_Reward_PlaneMid.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "dfddc0eb-5ff7-4023-99e7-54c7acaff054",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -383,7 +383,7 @@
       "subMetas": {}
     },
     "UI_Reward_PlaneTop.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "91fd1ceb-4c19-4a3e-bd56-c222cfc64c7a",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -405,7 +405,7 @@
       "subMetas": {}
     },
     "btn_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "3b35e5db-9164-4442-9d57-678b8a2da524",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -427,7 +427,7 @@
       "subMetas": {}
     },
     "btn_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "734830fb-cdcd-47f8-b65e-fc821b0bfddf",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -449,7 +449,7 @@
       "subMetas": {}
     },
     "day_reward_word.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c2eb0de2-7dec-4a61-986b-b755434c291e",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -471,7 +471,7 @@
       "subMetas": {}
     },
     "nb_00.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "6b6970a8-5954-4bed-b64c-b21b76799a59",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -493,7 +493,7 @@
       "subMetas": {}
     },
     "nb_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c05420cf-113a-4f00-ae67-521a55dca296",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -515,7 +515,7 @@
       "subMetas": {}
     },
     "nb_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "37e011d2-9034-4cf7-8684-e88d8217b7e4",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -537,7 +537,7 @@
       "subMetas": {}
     },
     "nb_03.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "db5b67f9-f847-4c23-86fe-64e24dc65970",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -559,7 +559,7 @@
       "subMetas": {}
     },
     "nb_04.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "21fff52d-a421-4737-a29b-e75e667747a7",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -581,7 +581,7 @@
       "subMetas": {}
     },
     "nb_05.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "1fadc0f8-5d4d-4d1d-9d7f-09450ea42f3f",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -603,7 +603,7 @@
       "subMetas": {}
     },
     "nb_06.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "ec0938d6-4eca-44e7-86f2-6b6b76f20cd0",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -625,7 +625,7 @@
       "subMetas": {}
     },
     "nb_07.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "cab5d895-2059-4326-86d5-375903e7b2f6",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -647,7 +647,7 @@
       "subMetas": {}
     },
     "nb_08.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "12c27092-a03a-47a0-a7be-89d07e93ee6c",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -669,7 +669,7 @@
       "subMetas": {}
     },
     "nb_09.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "4afbb19a-5f6e-44b5-b4ca-e10555f049b4",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -691,7 +691,7 @@
       "subMetas": {}
     },
     "new_play_ui02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "b57b27f8-234a-4970-989f-630320eb70ed",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -713,7 +713,7 @@
       "subMetas": {}
     },
     "new_play_word0.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "94d27c28-737b-4f8d-a937-d87e26de84d2",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -735,7 +735,7 @@
       "subMetas": {}
     },
     "ui_gray.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "fb72cadf-08a6-47bd-876f-3ab42e38443c",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -757,7 +757,7 @@
       "subMetas": {}
     },
     "ui_info_coin0.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "9873e1a9-041f-4725-8a51-c834f00c57eb",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -779,7 +779,7 @@
       "subMetas": {}
     },
     "ui_info_coin1.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "abbdd173-07fc-4ab1-ac47-d5952643b13c",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -801,7 +801,7 @@
       "subMetas": {}
     },
     "ui_info_coin2.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "562385ba-fd92-4c3d-a874-27de14e8de7f",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -823,7 +823,7 @@
       "subMetas": {}
     },
     "ui_info_plane0.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "50b06c6b-e85b-4d7f-8306-14f29c314ca2",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -845,7 +845,7 @@
       "subMetas": {}
     },
     "ui_info_plane1.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c92a52a4-43f1-4c5e-a0dd-7117807933a7",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -867,7 +867,7 @@
       "subMetas": {}
     },
     "ui_info_plane2.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "9c0a610b-3bde-4c76-bf7d-f18a857e6944",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -889,7 +889,7 @@
       "subMetas": {}
     },
     "ui_info_txt0.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c477ecb1-daf3-4452-90c9-d80dd45673e4",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -911,7 +911,7 @@
       "subMetas": {}
     },
     "ui_info_txt1.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "00b6927d-ff73-492f-88a7-b8bdef62ee48",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -933,7 +933,7 @@
       "subMetas": {}
     },
     "倒數_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "ab24627f-9e19-47a4-ae70-e91c922ffe75",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -955,7 +955,7 @@
       "subMetas": {}
     },
     "倒數_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "58c24090-1fc8-4404-a3da-b3d8766374ab",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -977,7 +977,7 @@
       "subMetas": {}
     },
     "倒數_03.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "ecde0504-a6cb-4cdb-83b3-5df9e9ec742f",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -999,7 +999,7 @@
       "subMetas": {}
     },
     "倒數_04.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "e05feccd-4092-41b9-b8c2-77be4ecd8d40",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1021,7 +1021,7 @@
       "subMetas": {}
     },
     "倒數_05.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "fb3b4cd5-6a40-4e91-a33f-d39b08ba7738",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1043,7 +1043,7 @@
       "subMetas": {}
     },
     "倒數_06.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "7fa45743-bbda-4813-8a7f-f1f514cfdd10",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1065,7 +1065,7 @@
       "subMetas": {}
     },
     "倒數_07.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "0c31ed11-9072-4f20-9f61-7664f1f17f84",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1087,7 +1087,7 @@
       "subMetas": {}
     },
     "倒數_08.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "db095730-0607-4d49-aab5-a6cd4834f2aa",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1109,7 +1109,7 @@
       "subMetas": {}
     },
     "倒數_09.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "00bcdfb9-3c52-4a26-953a-1068d56d2ca1",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1131,7 +1131,7 @@
       "subMetas": {}
     },
     "倒數_10.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "fc394e59-9d93-4a8f-9ac7-62b3d82d2c42",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1153,7 +1153,7 @@
       "subMetas": {}
     },
     "倒數_11.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "b4c0a34d-ba6b-4707-ae83-2a7fd5623957",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1175,7 +1175,7 @@
       "subMetas": {}
     },
     "倒數_12.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "a7a3840b-577d-4ea5-9933-91732ebcb08e",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1197,7 +1197,7 @@
       "subMetas": {}
     },
     "倒數_13.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "18d22569-fd40-4460-85e5-7a503f78fd5f",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1219,7 +1219,7 @@
       "subMetas": {}
     },
     "取消_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "3f60787d-66bb-4b8e-8e78-b13fc1bb4beb",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1241,7 +1241,7 @@
       "subMetas": {}
     },
     "取消_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "f0e0ab0e-5b6f-439d-8a23-ad8f3bab20db",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1263,7 +1263,7 @@
       "subMetas": {}
     },
     "底框.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "8e54d7eb-bfc8-41bb-8484-24918099be4c",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1285,7 +1285,7 @@
       "subMetas": {}
     },
     "數字輸入框.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "ffce3b11-b2cb-4183-8577-aa2f66ca260c",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1307,7 +1307,7 @@
       "subMetas": {}
     },
     "數字選擇框.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "79c6f842-c5cc-417f-b529-7171a6a3af9e",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1329,7 +1329,7 @@
       "subMetas": {}
     },
     "確定_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "e622ca3b-d17c-4ac6-b4e9-70e256b768e0",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1351,7 +1351,7 @@
       "subMetas": {}
     },
     "確定_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "3bbe2de7-f07b-42d1-a39f-79fc76acafd0",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1373,7 +1373,7 @@
       "subMetas": {}
     },
     "設定.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "e6cda190-c606-4e8a-a827-38cb84f5d1e3",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1395,7 +1395,7 @@
       "subMetas": {}
     },
     "遊戲速度_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "c9bbab11-694b-40df-89f7-102a84b27cb2",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1417,7 +1417,7 @@
       "subMetas": {}
     },
     "遊戲速度_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "4abedbb9-8346-4bd8-9304-b54904fb0139",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1439,7 +1439,7 @@
       "subMetas": {}
     },
     "重新輸入_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "6d6ad5f4-a028-4ef5-b418-1e9fb1ca8256",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1461,7 +1461,7 @@
       "subMetas": {}
     },
     "重新輸入_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "9e3dbc14-7941-466c-9baf-34b336b19418",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1483,7 +1483,7 @@
       "subMetas": {}
     },
     "離開框.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "21729c1b-e5cb-4b0b-947a-3d82775220e2",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1505,7 +1505,7 @@
       "subMetas": {}
     },
     "音效_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "fe4b2859-d5cf-4e02-b342-259c7cde93eb",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1527,7 +1527,7 @@
       "subMetas": {}
     },
     "音效_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "ec53d70f-0d34-4f89-b3a1-96f1114c83fa",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1549,7 +1549,7 @@
       "subMetas": {}
     },
     "音樂.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "a094bfc8-16db-4640-95d9-5bb0898dd3b4",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1571,7 +1571,7 @@
       "subMetas": {}
     },
     "音樂_01.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "40f77756-f4b3-4343-bed9-443999825acf",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",
@@ -1593,7 +1593,7 @@
       "subMetas": {}
     },
     "音樂_02.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "cd214b43-0c01-4e1d-9b55-15c5a06182ba",
       "rawTextureUuid": "5f0fb9fa-a26e-402f-8f90-196bef3d67ae",
       "trimType": "auto",

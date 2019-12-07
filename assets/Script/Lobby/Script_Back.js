@@ -18,7 +18,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.log("Scene_Lobby 載入");
+        cc.log("Scene_Lobby 載入11");
         this.current = cc.audioEngine.play(this.audio, true, 1);
     },
     

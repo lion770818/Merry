@@ -1,12 +1,14 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.3.1",
   "uuid": "b5f75647-16cb-440f-8797-dbcddfb47785",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
   "subMetas": {
     "Ebullet_02": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "cd6e75b3-0e51-4e6a-845d-3d352d5d676a",
       "rawTextureUuid": "b5f75647-16cb-440f-8797-dbcddfb47785",
       "trimType": "auto",
